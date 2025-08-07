@@ -15,6 +15,9 @@ mcp:
       args: ["-y", "@modelcontextprotocol/server-puppeteer"]
 
 
+# OpenAI configuration for mcp-agent framework
 openai:
+  # Use this for LM Studio or other OpenAI-compatible endpoints
+  base_url: "http://localhost:1234/v1"
+  default_model: "qwen/qwen3-coder-30b"
   # Secrets (API keys, etc.) are stored in an mcp_agent.secrets.yaml file which can be gitignored
-  default_model: "gpt-4.1-mini-2025-04-14"

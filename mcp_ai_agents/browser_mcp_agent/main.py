@@ -87,8 +87,8 @@ async def setup_agent():
 
 # Main function to run agent
 async def run_mcp_agent(message):
-    if not os.getenv("OPENAI_API_KEY"):
-        return "Error: OpenAI API key not provided"
+    # The mcp-agent framework will handle API key validation
+    # For local models, use a dummy API key in the secrets file
     
     try:
         # Make sure agent is initialized
@@ -121,7 +121,7 @@ if 'result' not in locals():
         """<div style='padding: 20px; background-color: #f0f2f6; border-radius: 10px;'>
         <h4>How to use this app:</h4>
         <ol>
-            <li>Enter your OpenAI API key in your mcp_agent.secrets.yaml file</li>
+            <li>Configure your OpenAI-compatible endpoint in mcp_agent.config.yaml and API key in mcp_agent.secrets.yaml</li>
             <li>Type a command for the agent to navigate and interact with websites</li>
             <li>Click 'Run Command' to see results</li>
         </ol>
